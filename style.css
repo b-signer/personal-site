@@ -38,13 +38,45 @@
   nav a:hover { color: var(--accent); }
   
   /* Hero */
+  /* Hero */
+  /* Hero */
   .hero {
     background: linear-gradient(135deg, #1a1a1d, #141416);
-    text-align: center;
     padding: 6rem 2rem;
   }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-text { max-width: 600px; }
+  
   .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
   .hero .accent { color: var(--accent); }
+  
+  .hero-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }
+  
+  /* On larger screens, put photo beside text */
+  @media (min-width: 768px) {
+    .hero-content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .hero-text { flex: 2; }
+    .hero-photo { flex: 1; display: flex; justify-content: center; }
+  }
   .button {
     display: inline-block;
     margin-top: 1.5rem;
