@@ -3,90 +3,350 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Benjamin Signer – Personal Website</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+  <title>Benjamin Signer</title>
+  <meta name="description" content="Benjamin Signer — CS student at UC San Diego, incoming SWE intern at Genentech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Benjamin Signer</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">BS</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about"      data-section="about">About</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#projects"   data-section="projects">Projects</a>
+        <a href="#contact"    data-section="contact">Contact</a>
+        <a href="https://github.com/b-signer" target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
     <section id="hero" class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Hello, I’m <span class="accent">Benjamin Signer</span></h2>
-        <p>I’m a computer science student passionate about building things with code.</p>
-        <a class="button" href="#projects">See my work</a>
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Hello, I'm</p>
+          <h1 class="hero-name">Benjamin<br>Signer</h1>
+          <p class="hero-sub">CS&thinsp;@&thinsp;UC San Diego &middot; Incoming SWE Intern&thinsp;@&thinsp;Genentech &middot; Building things that matter.</p>
+          <a href="#projects" class="btn-primary">See my work</a>
+        </div>
+        <div class="hero-photo" aria-hidden="true">
+          <div class="photo-ring">
+            <img src="headshot.jpeg" alt="Benjamin Signer" />
+          </div>
+        </div>
       </div>
-      <div class="hero-photo">
-        <img src="headshot.jpeg" alt="Headshot of Benjamin Signer"/>
-      </div>
-    </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
     </section>
 
-    <section id="about" class="section">
+    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <section id="about" class="section section-alt">
       <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I'm Benjamin, born and raised in Los Angeles, California. Currently, I am pursuing
-            my BS in Computer Science at UC San Diego in sunny La Jolla, California. My hobbies
-            include hiking, watching and reviewing movies, finding new indie music, and golfing. <br><br>
+        <h2 class="section-title reveal">About Me</h2>
 
-            I'm an aspiring software engineer, and I'm passionate about solving humanity's problems
-            with code. I've always loved solving puzzles, and I'm excited to make a career out of
-            tackling puzzles and helping people. I have experience with Python, Java, C, Javascript,
-            HTML/CSS, and SQL, as well as development tools like Git, VSCode, Vim, and GenAI tools.
-        </p>
-      </div>
-    </section>
+        <div class="about-grid">
+          <div class="about-prose reveal">
+            <p>I'm Benjamin, born and raised in Los Angeles and now pursuing a BS in Computer Science with a minor in Mathematics at UC San Diego. I was Valedictorian of my high school class of 130 — I gave my commencement speech on the importance of community — and I carry that same drive into everything I do at UCSD, where I'm a National Merit Finalist and recipient of the UCSD DOC Excellence in Undergraduate Research Award. I also placed in the top 10% nationally in the NACLO, the North American Computational Linguistics Olympiad.</p>
+            <p>I'm drawn to problems at the edges of what's been solved — whether that's building AI-powered tooling for biotech researchers, designing novel data encoding systems, or making the web more accessible. My interests span machine learning, systems programming, and full-stack development. Outside of code I'm an avid hiker, a dedicated movie watcher and reviewer, an indie music explorer, and a golfer (I captained my high school's varsity team).</p>
+          </div>
 
-    <section id="courses" class="section">
-      <div class="container">
-        <h2>Relevant Completed Coursework</h2>
-        <ul>
-          <li>Systems Programming & Software Tools (CSE 29)</li>
-          <li>Basic Data Structures & Object Oriented Design (CSE 12)</li>
-          <li>Computer Organization (CSE 30)</li>
-          <li>Discrete Math & Graph Theory (MATH 154)</li>
-          <li>Statistics and Probability (MATH 183)</li>
-          <li>Machine Learning: ML Algorithms (CSE 151A)</li>
-          <li>Honors Linear Algebra (MATH 31AH)</li>
-          <li>Honors Multivariable Calculus (MATH 31BH)</li>
-          <li>Honors Vector Calculus (MATH 31CH)</li>
-        </ul>
-      </div>
-    </section>
+          <div class="skills-block reveal">
+            <h3 class="block-label">Skills</h3>
+            <div class="skill-group">
+              <span class="skill-label">Programming</span>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">React</span>
+                <span class="pill">Java</span>
+                <span class="pill">C</span>
+                <span class="pill">HTML / CSS</span>
+                <span class="pill">Vim</span>
+                <span class="pill pill-dim">SQL</span>
+                <span class="pill pill-dim">Kotlin</span>
+                <span class="pill pill-dim">C#</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Tools &amp; Tech</span>
+              <div class="pill-row">
+                <span class="pill">Git</span>
+                <span class="pill">Next.js</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">Pinecone</span>
+                <span class="pill">GenAI / Agentic</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Languages</span>
+              <div class="pill-row">
+                <span class="pill">English</span>
+                <span class="pill">Modern Hebrew</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Restaurant Review Site</h3>
-            <p>A public message board where users can post reviews of their favorite restaurants.</p>
-            <a href="https://restaurant-reviews-je36.onrender.com/">View project →</a>
+        <div class="coursework reveal">
+          <h3 class="block-label">Relevant Coursework</h3>
+          <div class="course-groups">
+            <div class="course-group">
+              <h4>Machine Learning &amp; AI</h4>
+              <ul>
+                <li>Machine Learning Algorithms</li>
+                <li>NLP (Deep Learning)</li>
+              </ul>
+            </div>
+            <div class="course-group">
+              <h4>Systems &amp; Software</h4>
+              <ul>
+                <li>Systems Programming</li>
+                <li>Computer Organization</li>
+                <li>Advanced Data Structures</li>
+                <li>Algorithm Design &amp; Implementation</li>
+                <li>Software Engineering</li>
+                <li>Operating Systems</li>
+              </ul>
+            </div>
+            <div class="course-group">
+              <h4>Theory</h4>
+              <ul>
+                <li>Discrete Math / Graph Theory</li>
+                <li>Theory of Computation</li>
+              </ul>
+            </div>
+            <div class="course-group">
+              <h4>Mathematics</h4>
+              <ul>
+                <li>Honors Linear Algebra</li>
+                <li>Honors Multivariable Calculus</li>
+                <li>Honors Vector Calculus</li>
+                <li>Probability Theory</li>
+                <li>Statistical Methods</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+    <section id="experience" class="section">
       <div class="container">
-        <h2>Contact</h2>
-        <p>
-          Feel free to reach out via <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bennysigner@gmail.com" target="_blank">email</a> 
-          or connect on <a href="https://www.linkedin.com/in/benjamin-signer-88411830b/">LinkedIn</a>.
-        </p>
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-company">Genentech</span>
+                <span class="timeline-date">Summer 2026 &middot; South San Francisco, CA</span>
+              </div>
+              <div class="timeline-role">
+                Software Engineering Intern
+                <span class="badge">Incoming</span>
+              </div>
+              <p>Joining the Computational Sciences Orchestra team to build lab automation software that helps Genentech's researchers develop new pharmaceutical treatments. Working across the full stack in Python, JavaScript, React, and TypeScript, with AI/ML integration.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-company">Student Foundation Investment Committee, UCSD</span>
+                <span class="timeline-date">April 2026&ndash;Present &middot; San Diego, CA</span>
+              </div>
+              <div class="timeline-role">Quantitative Researcher</div>
+              <p>Conducting research into ETF mispricing and arbitrage opportunities on the Quant Technologies team &mdash; engineering at the intersection of finance and data science.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-company">Anvara</span>
+                <span class="timeline-date">Summer 2024 &middot; Remote</span>
+              </div>
+              <div class="timeline-role">Software Engineering Intern</div>
+              <p>Built front-end and back-end features in TypeScript, React, and SQL on a team of ~10 engineers. Implemented a location selection and mapping feature using the Google Places API for Anvara's digital marketplace.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-company">UC San Diego &mdash; Department of Mathematics</span>
+                <span class="timeline-date">Fall 2025 &middot; La Jolla, CA</span>
+              </div>
+              <div class="timeline-role">Course Reader / Grader</div>
+              <p>Graded homework and quizzes for 200+ undergrad students in MATH 3B using Gradescope. Coordinated with the grading team and provided detailed, constructive feedback on regrade requests.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-company">PlanetBravo Techno-tainment</span>
+                <span class="timeline-date">Summer 2024 &middot; Los Angeles, CA</span>
+              </div>
+              <div class="timeline-role">Counselor &amp; Tech Instructor</div>
+              <p>Taught robotics and programming — Arduino, Python, LEGO Spike Prime — to elementary and middle school students at an award-winning STEM summer camp. Supervised and cared for ~40 kids on a team of six.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
+
+    <!-- ═══════════════════ COMMUNITY ═══════════════════ -->
+    <section id="community" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Community &amp; Involvement</h2>
+        <div class="community-grid">
+
+          <div class="community-card reveal">
+            <div class="community-header">
+              <span class="community-org">Alpha Epsilon Pi</span>
+              <span class="community-date">Nov 2024&ndash;Present</span>
+            </div>
+            <div class="community-role">VP Admin &amp; Director of Internal Philanthropy</div>
+            <p>Serve on the executive board of a ~60-person chapter. Manage social media and PR, record meeting minutes, and lead the Internal Philanthropy Committee organizing fundraising events.</p>
+          </div>
+
+          <div class="community-card reveal">
+            <div class="community-header">
+              <span class="community-org">Hillel of San Diego</span>
+              <span class="community-date">Apr 2025&ndash;Present</span>
+            </div>
+            <div class="community-role">Student Ambassador</div>
+            <p>Manage hospitality, guest relations, and campus representation for one of the fastest-growing Hillel chapters in the country, interfacing with 500+ students, faculty, donors, and community members.</p>
+          </div>
+
+          <div class="community-card reveal">
+            <div class="community-header">
+              <span class="community-org">Eta Kappa Nu (HKN)</span>
+              <span class="community-date">Jan 2025&ndash;Present</span>
+            </div>
+            <div class="community-role">Software Engineer, Kappa Psi Chapter</div>
+            <p>Full-stack developer on the nation's largest HKN chapter's projects team, building the Projects Portal and an AI-powered RAG chatbot used by the broader UCSD engineering community.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <div class="project-number">01</div>
+            <h3>HKN Projects Portal</h3>
+            <p>Built a web portal for UCSD's HKN chapter to showcase student engineering projects, events, and resources. Features an AI chatbot backed by a multi-LLM RAG pipeline (Claude, Gemini, OpenAI) with a Pinecone vector database, and a Decap CMS backend so non-technical admins can manage content through a GitHub-backed workflow. Presented at the HKN Project Showcase.</p>
+            <div class="tag-row">
+              <span class="tag">Next.js</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Pinecone</span>
+              <span class="tag">Decap CMS</span>
+              <span class="tag">Netlify</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">02</div>
+            <h3>Restaurant Review Website</h3>
+            <p>A public message board where users can post and browse restaurant reviews. Built the full stack from scratch &mdash; server, database, and templated front-end.</p>
+            <div class="tag-row">
+              <span class="tag">Node.js</span>
+              <span class="tag">SQL</span>
+              <span class="tag">EJS</span>
+              <span class="tag">HTML / CSS</span>
+            </div>
+            <a href="https://restaurant-reviews-je36.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">View project &rarr;</a>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">03</div>
+            <h3>Base-3 QR Code</h3>
+            <p>Redesigned the QR code from the ground up, using color to encode more information in less space. Built a generation and encryption algorithm alongside an image scanner and decrypter, applying number theory and OpenCV-based image processing.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Cryptography</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">04</div>
+            <h3>CamelTags</h3>
+            <p>A tool that automatically reformats hashtags into accessible CamelCase for visually impaired users. Pulled real-world usage data via the Google Search and Twitter APIs to validate formatting decisions at scale.</p>
+            <div class="tag-row">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Google Search API</span>
+              <span class="tag">Twitter API</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACT ═══════════════════ -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Get in Touch</h2>
+        <p class="contact-lead reveal">I'm always open to new opportunities, collaborations, and conversations. Feel free to reach out.</p>
+        <div class="contact-links reveal">
+          <a href="mailto:bennysigner@gmail.com" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            bennysigner@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/benjamin-signer-88411830b/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/b-signer" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -95,6 +355,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=1"></script>
+  <script src="script.js"></script>
 </body>
 </html>
