@@ -4,21 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Benjamin Signer</title>
-  <meta name="description" content="Benjamin Signer — CS student at UC San Diego, incoming SWE intern at Genentech." />
+  <meta name="description" content="Benjamin Signer — CS student at UC San Diego and software engineering intern at Genentech." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-
   <header class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">BS</a>
       <nav class="nav-links" id="navLinks">
         <a href="#about"      data-section="about">About</a>
         <a href="#experience" data-section="experience">Experience</a>
+        <a href="#community"  data-section="community">Community</a>
         <a href="#projects"   data-section="projects">Projects</a>
         <a href="#contact"    data-section="contact">Contact</a>
         <a href="https://github.com/b-signer" target="_blank" rel="noopener noreferrer"
@@ -28,7 +27,7 @@
           </svg>
         </a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,34 +35,31 @@
 
   <main>
 
-    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <!-- Hero -->
     <section id="hero" class="hero">
-      <canvas id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero-vignette" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-text">
           <p class="hero-eyebrow">Hello, I'm</p>
           <h1 class="hero-name">Benjamin<br>Signer</h1>
-          <p class="hero-sub">CS&thinsp;@&thinsp;UC San Diego &middot; Incoming SWE Intern&thinsp;@&thinsp;Genentech &middot; Building things that matter.</p>
+          <p class="hero-sub">CS student at UC San Diego. This past summer I built lab-automation and AI tools at Genentech. The rest of the time, I'm usually deep in a side project.</p>
           <a href="#projects" class="btn-primary">See my work</a>
         </div>
-        <div class="hero-photo" aria-hidden="true">
+        <div class="hero-photo">
           <div class="photo-ring">
             <img src="headshot.jpeg" alt="Benjamin Signer" />
           </div>
         </div>
       </div>
-      <div class="scroll-hint" aria-hidden="true"><span></span></div>
     </section>
 
-    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <!-- About -->
     <section id="about" class="section section-alt">
       <div class="container">
         <h2 class="section-title reveal">About Me</h2>
 
         <div class="about-grid">
           <div class="about-prose reveal">
-            <p>I'm Benjamin, born and raised in Los Angeles and now pursuing a BS in Computer Science with a minor in Mathematics at UC San Diego. I've always been drawn to puzzles: the kind that take weeks to crack and teach you something in the process. That instinct led me to software engineering, and this summer it's taking me to Genentech, where I'll be building lab automation tools for pharmaceutical researchers.</p>
+            <p>I'm Benjamin, born and raised in Los Angeles and now pursuing a BS in Computer Science with minors in Mathematics and the Philosophy of Cognitive Science at UC San Diego. I've always been drawn to puzzles: the kind that take weeks to crack and teach you something in the process. That instinct led me to software engineering, and this past summer it took me to Genentech, where I built lab-automation tools for pharmaceutical researchers.</p>
             <p>When I'm not writing code, I'm hiking, hunting down new indie music, keeping a detailed log of every film I watch, or playing golf — I captained my high school's varsity team. I also spent a quarter deep in engineering ethics research, which shaped how I think about the work I build and who ends up affected by it. Turns out those questions don't go away once you leave the classroom.</p>
           </div>
 
@@ -73,26 +69,37 @@
               <span class="skill-label">Programming</span>
               <div class="pill-row">
                 <span class="pill">Python</span>
+                <span class="pill">Java</span>
+                <span class="pill">C</span>
+                <span class="pill">C++</span>
                 <span class="pill">JavaScript</span>
                 <span class="pill">TypeScript</span>
                 <span class="pill">React</span>
-                <span class="pill">Java</span>
-                <span class="pill">C</span>
                 <span class="pill">HTML / CSS</span>
-                <span class="pill">Vim</span>
-                <span class="pill pill-dim">SQL</span>
-                <span class="pill pill-dim">Kotlin</span>
-                <span class="pill pill-dim">C#</span>
+                <span class="pill">SQL</span>
               </div>
             </div>
             <div class="skill-group">
-              <span class="skill-label">Tools &amp; Tech</span>
+              <span class="skill-label">AI &amp; ML</span>
+              <div class="pill-row">
+                <span class="pill">LLM Agents</span>
+                <span class="pill">Multi-Agent Systems</span>
+                <span class="pill">RAG</span>
+                <span class="pill">Context Engineering</span>
+                <span class="pill">AWS Bedrock</span>
+                <span class="pill">OpenRouter</span>
+                <span class="pill">LangSmith</span>
+                <span class="pill">Pinecone</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Tools</span>
               <div class="pill-row">
                 <span class="pill">Git</span>
+                <span class="pill">GitLab</span>
                 <span class="pill">Next.js</span>
                 <span class="pill">Node.js</span>
-                <span class="pill">Pinecone</span>
-                <span class="pill">GenAI / Agentic</span>
+                <span class="pill">Vim</span>
               </div>
             </div>
             <div class="skill-group">
@@ -113,6 +120,8 @@
               <ul>
                 <li>Machine Learning Algorithms</li>
                 <li>NLP (Deep Learning)</li>
+                <li>Unsupervised Learning</li>
+                <li>Recommender Systems &amp; Web Mining</li>
               </ul>
             </div>
             <div class="course-group">
@@ -124,6 +133,7 @@
                 <li>Algorithm Design &amp; Implementation</li>
                 <li>Software Engineering</li>
                 <li>Operating Systems</li>
+                <li>Computer Security</li>
               </ul>
             </div>
             <div class="course-group">
@@ -148,7 +158,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+    <!-- Experience -->
     <section id="experience" class="section">
       <div class="container">
         <h2 class="section-title reveal">Experience</h2>
@@ -158,14 +168,11 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <span class="timeline-company">Genentech</span>
-                <span class="timeline-date">Summer 2026 &middot; South San Francisco, CA</span>
+                <h3 class="timeline-company">Genentech</h3>
+                <span class="timeline-date">Jun&ndash;Sep 2026 &middot; South San Francisco, CA</span>
               </div>
-              <div class="timeline-role">
-                Software Engineering Intern
-                <span class="badge">Incoming</span>
-              </div>
-              <p>Joining the Computational Sciences Orchestra team to build lab automation software that helps Genentech's researchers develop new pharmaceutical treatments. Working across the full stack in Python, JavaScript, React, and TypeScript, with AI/ML integration.</p>
+              <div class="timeline-role">Software Engineering Intern</div>
+              <p>Built and maintained an internal Lab Information Management System (LIMS) for in-vitro drug discovery, and shipped an AI agent that lets scientists generate liquid-handler picklists from natural-language requests. Worked in Python and TypeScript on AWS Bedrock, using LangSmith for LLM tracing and evaluation.</p>
             </div>
           </div>
 
@@ -173,11 +180,11 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <span class="timeline-company">Student Foundation Investment Committee, UCSD</span>
+                <h3 class="timeline-company">Student Foundation Investment Committee, UCSD</h3>
                 <span class="timeline-date">April 2026&ndash;Present &middot; San Diego, CA</span>
               </div>
               <div class="timeline-role">Quantitative Researcher</div>
-              <p>Conducting research into ETF mispricing and arbitrage opportunities on the Quant Technologies team &mdash; engineering at the intersection of finance and data science.</p>
+              <p>Researching ETF mispricing and arbitrage opportunities on the Quant Technologies team.</p>
             </div>
           </div>
 
@@ -185,8 +192,8 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <span class="timeline-company">Anvara</span>
-                <span class="timeline-date">Summer 2024 &middot; Remote</span>
+                <h3 class="timeline-company">Anvara</h3>
+                <span class="timeline-date">Aug&ndash;Sep 2024 &middot; Remote</span>
               </div>
               <div class="timeline-role">Software Engineering Intern</div>
               <p>Built front-end and back-end features in TypeScript, React, and SQL on a team of ~10 engineers. Implemented a location selection and mapping feature using the Google Places API for Anvara's digital marketplace.</p>
@@ -197,11 +204,11 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <span class="timeline-company">UC San Diego &mdash; Department of Mathematics</span>
-                <span class="timeline-date">Fall 2025 &middot; La Jolla, CA</span>
+                <h3 class="timeline-company">UC San Diego &mdash; Department of Mathematics</h3>
+                <span class="timeline-date">Sep 2025&ndash;Jan 2026 &middot; La Jolla, CA</span>
               </div>
-              <div class="timeline-role">Course Reader / Grader</div>
-              <p>Graded homework and quizzes for 200+ undergrad students in MATH 3B using Gradescope. Coordinated with the grading team and provided detailed, constructive feedback on regrade requests.</p>
+              <div class="timeline-role">Instructional Assistant &amp; Grader</div>
+              <p>Graded homework and quizzes for 265+ undergraduate students in MATH 3B (Foundations of Precalculus) using Gradescope, and handled grading concerns and regrade requests.</p>
             </div>
           </div>
 
@@ -209,11 +216,11 @@
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <span class="timeline-company">PlanetBravo Techno-tainment</span>
-                <span class="timeline-date">Summer 2024 &middot; Los Angeles, CA</span>
+                <h3 class="timeline-company">PlanetBravo Techno-tainment</h3>
+                <span class="timeline-date">Jun 2024&ndash;Aug 2025 &middot; Los Angeles, CA</span>
               </div>
               <div class="timeline-role">Counselor &amp; Tech Instructor</div>
-              <p>Taught robotics and programming — Arduino, Python, LEGO Spike Prime — to elementary and middle school students at an award-winning STEM summer camp. Supervised and cared for ~40 kids on a team of six.</p>
+              <p>Taught robotics and programming — Arduino, Python, LEGO Spike Prime, and ClickTeam Fusion — to elementary and middle school students at an award-winning STEM summer camp. Supervised and cared for ~40 kids on a team of six, including accommodations for students with learning differences.</p>
             </div>
           </div>
 
@@ -221,7 +228,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ COMMUNITY ═══════════════════ -->
+    <!-- Community -->
     <section id="community" class="section section-alt">
       <div class="container">
         <h2 class="section-title reveal">Community &amp; Involvement</h2>
@@ -229,7 +236,7 @@
 
           <div class="community-card reveal">
             <div class="community-header">
-              <span class="community-org">Alpha Epsilon Pi</span>
+              <h3 class="community-org">Alpha Epsilon Pi</h3>
               <span class="community-date">Nov 2024&ndash;Present</span>
             </div>
             <div class="community-role">VP Admin &amp; Director of Internal Philanthropy</div>
@@ -238,7 +245,7 @@
 
           <div class="community-card reveal">
             <div class="community-header">
-              <span class="community-org">Hillel of San Diego</span>
+              <h3 class="community-org">Hillel of San Diego</h3>
               <span class="community-date">Apr 2025&ndash;Present</span>
             </div>
             <div class="community-role">Student Ambassador</div>
@@ -247,7 +254,7 @@
 
           <div class="community-card reveal">
             <div class="community-header">
-              <span class="community-org">Eta Kappa Nu (HKN)</span>
+              <h3 class="community-org">Eta Kappa Nu (HKN)</h3>
               <span class="community-date">Jan 2025&ndash;Present</span>
             </div>
             <div class="community-role">Software Engineer, Kappa Psi Chapter</div>
@@ -258,16 +265,27 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+    <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title reveal">Projects</h2>
         <div class="projects-grid">
 
           <div class="project-card reveal">
-            <div class="project-number">01</div>
+            <h3>Thinking, Fast and Slow — Dual-Model Reasoning Agent</h3>
+            <p>A multi-agent reasoning system inspired by Kahneman's <em>Thinking, Fast and Slow</em>. It routes each query between a fast, lightweight "System 1" model and a slower, high-reasoning "System 2" model, with a deterministic memory cache and confidence-based escalation. On my evaluation set it cut cost 6.3&times; while holding 98.5% of the accuracy.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">OpenRouter</span>
+              <span class="tag">Multi-Agent</span>
+              <span class="tag">Evaluation</span>
+            </div>
+            <a href="https://github.com/b-signer/tfas_agent_mult" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View the Thinking, Fast and Slow source on GitHub">View on GitHub &rarr;</a>
+          </div>
+
+          <div class="project-card reveal">
             <h3>HKN Projects Portal</h3>
-            <p>Built a web portal for UCSD's HKN chapter to showcase student engineering projects, events, and resources. Features an AI chatbot backed by a multi-LLM RAG pipeline (Claude, Gemini, OpenAI) with a Pinecone vector database, and a Decap CMS backend so non-technical admins can manage content through a GitHub-backed workflow. Presented at the HKN Project Showcase.</p>
+            <p>A web portal for UCSD's HKN chapter that showcases student engineering projects, events, and resources. It has an AI chatbot backed by a multi-LLM RAG pipeline (Claude, Gemini, OpenAI) over a Pinecone vector database, plus a Decap CMS so non-technical admins can edit content through a GitHub-backed workflow. Presented at the HKN Project Showcase.</p>
             <div class="tag-row">
               <span class="tag">Next.js</span>
               <span class="tag">RAG</span>
@@ -275,26 +293,34 @@
               <span class="tag">Decap CMS</span>
               <span class="tag">Netlify</span>
             </div>
-            <a href="https://hkn-projects.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">View project &rarr;</a>
+            <a href="https://hkn-projects.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit the HKN Projects Portal">Visit the portal &rarr;</a>
           </div>
 
           <div class="project-card reveal">
-            <div class="project-number">02</div>
+            <h3>Mahjong Rules Agent</h3>
+            <p>An AI agent that answers American Mahjong questions grounded in the official card and rulebook. Rather than a retrieval pipeline, I kept its answers faithful to the rules through careful context engineering and custom tool use.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">OpenRouter</span>
+              <span class="tag">LLM Tooling</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
             <h3>Restaurant Review Website</h3>
-            <p>A public message board where users can post and browse restaurant reviews. Built the full stack from scratch &mdash; server, database, and templated front-end.</p>
+            <p>A public message board where users post and browse restaurant reviews. I built the full stack from scratch — server, database, and templated front-end.</p>
             <div class="tag-row">
               <span class="tag">Node.js</span>
               <span class="tag">SQL</span>
               <span class="tag">EJS</span>
               <span class="tag">HTML / CSS</span>
             </div>
-            <a href="https://restaurant-reviews-je36.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">View project &rarr;</a>
+            <a href="https://restaurant-reviews-je36.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open the live Restaurant Review site">Open the live site &rarr;</a>
           </div>
 
           <div class="project-card reveal">
-            <div class="project-number">03</div>
             <h3>Base-3 QR Code</h3>
-            <p>Redesigned the QR code from the ground up, using color to encode more information in less space. Built a generation and encryption algorithm alongside an image scanner and decrypter, applying number theory and OpenCV-based image processing.</p>
+            <p>A from-scratch redesign of the QR code that uses color to pack more information into less space. I wrote the generation and encryption algorithm, an image scanner, and a decrypter, leaning on number theory and OpenCV for the image processing.</p>
             <div class="tag-row">
               <span class="tag">Python</span>
               <span class="tag">OpenCV</span>
@@ -303,9 +329,8 @@
           </div>
 
           <div class="project-card reveal">
-            <div class="project-number">04</div>
             <h3>CamelTags</h3>
-            <p>A tool that automatically reformats hashtags into accessible CamelCase for visually impaired users. Pulled real-world usage data via the Google Search and Twitter APIs to validate formatting decisions at scale.</p>
+            <p>A tool that reformats hashtags into accessible CamelCase for visually impaired users. I pulled real-world usage data from the Google Search and Twitter APIs to check formatting choices against how tags are actually written.</p>
             <div class="tag-row">
               <span class="tag">JavaScript</span>
               <span class="tag">Google Search API</span>
@@ -317,11 +342,11 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ CONTACT ═══════════════════ -->
+    <!-- Contact -->
     <section id="contact" class="section section-alt">
       <div class="container">
-        <h2 class="section-title reveal">Get in Touch</h2>
-        <p class="contact-lead reveal">I'm always open to new opportunities, collaborations, and conversations. Feel free to reach out.</p>
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="contact-lead reveal">I'm looking for summer 2027 SWE internships, but I'll answer just about anything — a project idea, a bug in something I built, or a good film recommendation. Email is the fastest way to reach me.</p>
         <div class="contact-links reveal">
           <a href="mailto:bsigner@ucsd.edu" class="contact-item">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
